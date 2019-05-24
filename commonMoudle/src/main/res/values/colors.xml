@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00AAFF</color>
+    <color name="colorPrimaryDark">#00AAFF</color>
+    <color name="colorAccent">#00AAFF</color>
+
+    <color name="colorTheme">#00AAFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#ff000000</color>
+    <color name="shape_text_color">#FFffffff</color>
+    <color name="textCommon">#181818</color>
+
+    <color name="y_blue_start">#4DEFCC</color>
+    <color name="y_blue_end">#00CEF4</color>
+    <color name="y_line_divider">#FFE6E6E6</color>
+
+    <color name="foreground">#1f000000</color> <!-- 前景色 （浅透明） -->
+    <color name="transparent">#00000000</color><!--透明色 -->
+    <color name="transparent1">#00ffffff</color><!--透明色 -->
+    <color name="black_transparent">#7f000000</color><!--黑色半透明色 -->
+    <color name="white_transparent">#7fffffff</color>
+    <color name="lightBlack">#AA000000</color>
+    <color name="greyCCC">#CCCCCC</color><!--白色半透明色 -->
+
+    <color name="red">#FF0000</color>
+
+</resources>

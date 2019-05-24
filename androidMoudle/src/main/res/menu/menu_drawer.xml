@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_like"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/my_like" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_info_about"
+        android:title="@string/my_about" />
+    <item
+        android:id="@+id/nav_update"
+        android:icon="@drawable/ic_update"
+        android:title="@string/my_update" />
+    <item
+        android:id="@+id/nav_knowledge"
+        android:icon="@drawable/ic_code"
+        android:title="@string/my_knowledge" />
+    <item
+        android:id="@+id/nav_blog"
+        android:icon="@drawable/ic_knowledge"
+        android:title="@string/my_blog" />
+    <item
+        android:id="@+id/nav_test"
+        android:icon="@drawable/ic_extension"
+        android:title="@string/my_test" />
+
+</menu>

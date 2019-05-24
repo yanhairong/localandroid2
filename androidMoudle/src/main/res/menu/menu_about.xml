@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuGithub"
+        android:title="github"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuSource"
+        android:title="source"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuIssue"
+        android:title="issue"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuEmail"
+        android:title="email"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuQQGroup"
+        android:title="qq_group"
+        app:showAsAction="never" />
+</menu>

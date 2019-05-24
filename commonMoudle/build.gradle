@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+
+
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.minSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ AROUTER_MODULE_NAME : project.getName() ]
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation('com.android.support:appcompat-v7:${cfgs.androidSupportVersion}') {
+        exclude group: 'com.android.support'
+    }
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    api 'com.github.GrenderG:Toasty:1.3.0'
+    api "com.github.bumptech.glide:glide:${cfgs.glide}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${cfgs.glide}"
+
+    // support
+    api "com.android.support:design:${cfgs.androidSupportVersion}"
+    api "com.android.support:cardview-v7:${cfgs.androidSupportVersion}"
+
+    // 字母目录列表
+//    api 'me.yokeyword:indexablerecyclerview:1.3.0'
+
+    // 动态权限
+    api 'pub.devrel:easypermissions:1.0.1'
+
+    // 鸿洋FlowLayout
+    api 'com.hyman:flowlayout-lib:1.1.2'
+
+    // WebView框架
+    api 'com.just.agentweb:agentweb:4.0.2'
+
+    // 屏幕适配方案
+    api 'me.jessyan:autosize:1.0.1'
+
+    // retrofit
+    api "com.squareup.retrofit2:retrofit:${cfgs.retrofit}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${cfgs.retrofit}"
+    api "com.squareup.retrofit2:converter-gson:${cfgs.retrofit}"
+
+    // rxJava
+    api "io.reactivex.rxjava2:rxjava:${cfgs.rxjava}"
+    api "io.reactivex.rxjava2:rxandroid:${cfgs.rxandroid}"
+
+    // 第三方库
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.12'
+    api 'com.youth.banner:banner:1.4.10'
+
+    api 'com.alibaba:arouter-api:1.4.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
+    // For LifeCycle, LiveData, and ViewModel
+    api 'android.arch.lifecycle:runtime:1.1.1'
+    api 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+}

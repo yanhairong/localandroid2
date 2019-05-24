@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="user"
+            type="android.yhr.com.cn.androidmoudle.bean.UserBean" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/iv_nav_header"
+            android:layout_width="64dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_10"
+            app:srcCompat="@mipmap/logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_nav_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/dp_10"
+            android:text="@{user.username ?? `未登录`}"
+            android:textColor="@color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_logout"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@{user.username != null ? @string/logout : ``}"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</layout>
